@@ -12,4 +12,4 @@ Basic functionalities include -
 5. HTML Editor
 6. Source Code Viewer.
 
-Download and Run "ExciteBrowser > Setup > Setup.exe" to install the ExciteBrowser Browser
+Download "Setup" folder and Run "Setup > Setup.exe" to install and run the ExciteBrowser.
