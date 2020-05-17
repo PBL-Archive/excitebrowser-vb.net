@@ -1,4 +1,7 @@
 # ExciteBrowser
+
+This was done in 2016 and recently just modified to fix few small errors.
+
 ExciteBrowser is a simple web browser based on .NET 4 Framework.
 
 Basic functionalities include -
