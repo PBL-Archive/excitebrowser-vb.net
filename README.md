@@ -1,4 +1,4 @@
-# ExciteBrowser Browser
+# ExciteBrowser
 ExciteBrowser is a simple web browser based on .NET 4 Framework.
 
 Basic functionalities include -
@@ -9,4 +9,4 @@ Basic functionalities include -
 5. HTML Editor
 6. Source Code Viewer.
 
-Download and Run "ExciteBrowser > Setup > Debug > Setup.exe" to install the ExciteBrowser Browser
+Download and Run "ExciteBrowser > Setup > Setup.exe" to install the ExciteBrowser Browser
