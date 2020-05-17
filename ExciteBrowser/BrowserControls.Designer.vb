@@ -23,9 +23,10 @@ Partial Class BrowserControls
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrowserControls))
-        Me.ControlsTab = New System.Windows.Forms.TabControl()
-        Me.HistoryTabPage = New System.Windows.Forms.TabPage()
-        Me.HistoryListBox = New System.Windows.Forms.ListBox()
+        Me.SettingsTabPage = New System.Windows.Forms.TabPage()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.BookmarksList = New System.Windows.Forms.ListBox()
         Me.PageSettingsTabPage = New System.Windows.Forms.TabPage()
         Me.NewTabInfoSettings = New System.Windows.Forms.GroupBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -59,61 +60,61 @@ Partial Class BrowserControls
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.SettingsTabPage = New System.Windows.Forms.TabPage()
-        Me.BookmarksList = New System.Windows.Forms.ListBox()
+        Me.HistoryTabPage = New System.Windows.Forms.TabPage()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.NavigateSelectedLink = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.ControlsTab.SuspendLayout()
-        Me.HistoryTabPage.SuspendLayout()
+        Me.HistoryListBox = New System.Windows.Forms.ListBox()
+        Me.ControlsTab = New System.Windows.Forms.TabControl()
+        Me.SettingsTabPage.SuspendLayout()
         Me.PageSettingsTabPage.SuspendLayout()
         Me.NewTabInfoSettings.SuspendLayout()
         Me.HomePageInfoSettings.SuspendLayout()
         Me.NewTabSettings.SuspendLayout()
         Me.HomePageSettings.SuspendLayout()
-        Me.SettingsTabPage.SuspendLayout()
+        Me.HistoryTabPage.SuspendLayout()
+        Me.ControlsTab.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ControlsTab
+        'SettingsTabPage
         '
-        Me.ControlsTab.Controls.Add(Me.HistoryTabPage)
-        Me.ControlsTab.Controls.Add(Me.PageSettingsTabPage)
-        Me.ControlsTab.Controls.Add(Me.SettingsTabPage)
-        Me.ControlsTab.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ControlsTab.ItemSize = New System.Drawing.Size(126, 30)
-        Me.ControlsTab.Location = New System.Drawing.Point(0, 0)
-        Me.ControlsTab.Margin = New System.Windows.Forms.Padding(4)
-        Me.ControlsTab.Name = "ControlsTab"
-        Me.ControlsTab.SelectedIndex = 0
-        Me.ControlsTab.Size = New System.Drawing.Size(676, 656)
-        Me.ControlsTab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
-        Me.ControlsTab.TabIndex = 0
+        Me.SettingsTabPage.Controls.Add(Me.TextBox6)
+        Me.SettingsTabPage.Controls.Add(Me.Button7)
+        Me.SettingsTabPage.Controls.Add(Me.BookmarksList)
+        Me.SettingsTabPage.Location = New System.Drawing.Point(4, 34)
+        Me.SettingsTabPage.Margin = New System.Windows.Forms.Padding(4)
+        Me.SettingsTabPage.Name = "SettingsTabPage"
+        Me.SettingsTabPage.Padding = New System.Windows.Forms.Padding(4)
+        Me.SettingsTabPage.Size = New System.Drawing.Size(668, 618)
+        Me.SettingsTabPage.TabIndex = 3
+        Me.SettingsTabPage.Text = "Bookmarks"
+        Me.SettingsTabPage.UseVisualStyleBackColor = True
         '
-        'HistoryTabPage
+        'TextBox6
         '
-        Me.HistoryTabPage.Controls.Add(Me.TextBox5)
-        Me.HistoryTabPage.Controls.Add(Me.NavigateSelectedLink)
-        Me.HistoryTabPage.Controls.Add(Me.HistoryListBox)
-        Me.HistoryTabPage.Location = New System.Drawing.Point(4, 34)
-        Me.HistoryTabPage.Margin = New System.Windows.Forms.Padding(4)
-        Me.HistoryTabPage.Name = "HistoryTabPage"
-        Me.HistoryTabPage.Padding = New System.Windows.Forms.Padding(4)
-        Me.HistoryTabPage.Size = New System.Drawing.Size(668, 618)
-        Me.HistoryTabPage.TabIndex = 0
-        Me.HistoryTabPage.Text = "History"
-        Me.HistoryTabPage.UseVisualStyleBackColor = True
+        Me.TextBox6.Location = New System.Drawing.Point(8, 588)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(521, 22)
+        Me.TextBox6.TabIndex = 4
         '
-        'HistoryListBox
+        'Button7
         '
-        Me.HistoryListBox.FormattingEnabled = True
-        Me.HistoryListBox.ItemHeight = 16
-        Me.HistoryListBox.Items.AddRange(New Object() {""})
-        Me.HistoryListBox.Location = New System.Drawing.Point(0, 0)
-        Me.HistoryListBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.HistoryListBox.Name = "HistoryListBox"
-        Me.HistoryListBox.Size = New System.Drawing.Size(667, 580)
-        Me.HistoryListBox.TabIndex = 0
+        Me.Button7.Location = New System.Drawing.Point(535, 587)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(129, 25)
+        Me.Button7.TabIndex = 3
+        Me.Button7.Text = "Copy to Textbox"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'BookmarksList
+        '
+        Me.BookmarksList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BookmarksList.FormattingEnabled = True
+        Me.BookmarksList.ItemHeight = 18
+        Me.BookmarksList.Location = New System.Drawing.Point(0, 0)
+        Me.BookmarksList.Name = "BookmarksList"
+        Me.BookmarksList.Size = New System.Drawing.Size(668, 580)
+        Me.BookmarksList.TabIndex = 0
         '
         'PageSettingsTabPage
         '
@@ -519,29 +520,19 @@ Partial Class BrowserControls
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'SettingsTabPage
+        'HistoryTabPage
         '
-        Me.SettingsTabPage.Controls.Add(Me.TextBox6)
-        Me.SettingsTabPage.Controls.Add(Me.Button7)
-        Me.SettingsTabPage.Controls.Add(Me.BookmarksList)
-        Me.SettingsTabPage.Location = New System.Drawing.Point(4, 34)
-        Me.SettingsTabPage.Margin = New System.Windows.Forms.Padding(4)
-        Me.SettingsTabPage.Name = "SettingsTabPage"
-        Me.SettingsTabPage.Padding = New System.Windows.Forms.Padding(4)
-        Me.SettingsTabPage.Size = New System.Drawing.Size(668, 618)
-        Me.SettingsTabPage.TabIndex = 3
-        Me.SettingsTabPage.Text = "Bookmarks"
-        Me.SettingsTabPage.UseVisualStyleBackColor = True
-        '
-        'BookmarksList
-        '
-        Me.BookmarksList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BookmarksList.FormattingEnabled = True
-        Me.BookmarksList.ItemHeight = 18
-        Me.BookmarksList.Location = New System.Drawing.Point(0, 0)
-        Me.BookmarksList.Name = "BookmarksList"
-        Me.BookmarksList.Size = New System.Drawing.Size(668, 580)
-        Me.BookmarksList.TabIndex = 0
+        Me.HistoryTabPage.Controls.Add(Me.TextBox5)
+        Me.HistoryTabPage.Controls.Add(Me.NavigateSelectedLink)
+        Me.HistoryTabPage.Controls.Add(Me.HistoryListBox)
+        Me.HistoryTabPage.Location = New System.Drawing.Point(4, 34)
+        Me.HistoryTabPage.Margin = New System.Windows.Forms.Padding(4)
+        Me.HistoryTabPage.Name = "HistoryTabPage"
+        Me.HistoryTabPage.Padding = New System.Windows.Forms.Padding(4)
+        Me.HistoryTabPage.Size = New System.Drawing.Size(668, 618)
+        Me.HistoryTabPage.TabIndex = 0
+        Me.HistoryTabPage.Text = "History"
+        Me.HistoryTabPage.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
@@ -560,22 +551,31 @@ Partial Class BrowserControls
         Me.NavigateSelectedLink.Text = "Copy to Textbox"
         Me.NavigateSelectedLink.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'HistoryListBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(8, 588)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(521, 22)
-        Me.TextBox6.TabIndex = 4
+        Me.HistoryListBox.FormattingEnabled = True
+        Me.HistoryListBox.ItemHeight = 16
+        Me.HistoryListBox.Items.AddRange(New Object() {""})
+        Me.HistoryListBox.Location = New System.Drawing.Point(0, 0)
+        Me.HistoryListBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.HistoryListBox.Name = "HistoryListBox"
+        Me.HistoryListBox.Size = New System.Drawing.Size(667, 580)
+        Me.HistoryListBox.TabIndex = 0
         '
-        'Button7
+        'ControlsTab
         '
-        Me.Button7.Location = New System.Drawing.Point(535, 587)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(129, 25)
-        Me.Button7.TabIndex = 3
-        Me.Button7.Text = "Copy to Textbox"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.ControlsTab.Controls.Add(Me.HistoryTabPage)
+        Me.ControlsTab.Controls.Add(Me.PageSettingsTabPage)
+        Me.ControlsTab.Controls.Add(Me.SettingsTabPage)
+        Me.ControlsTab.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ControlsTab.ItemSize = New System.Drawing.Size(126, 30)
+        Me.ControlsTab.Location = New System.Drawing.Point(0, 0)
+        Me.ControlsTab.Margin = New System.Windows.Forms.Padding(4)
+        Me.ControlsTab.Name = "ControlsTab"
+        Me.ControlsTab.SelectedIndex = 0
+        Me.ControlsTab.Size = New System.Drawing.Size(676, 656)
+        Me.ControlsTab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+        Me.ControlsTab.TabIndex = 0
         '
         'BrowserControls
         '
@@ -592,9 +592,8 @@ Partial Class BrowserControls
         Me.Name = "BrowserControls"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Controls"
-        Me.ControlsTab.ResumeLayout(False)
-        Me.HistoryTabPage.ResumeLayout(False)
-        Me.HistoryTabPage.PerformLayout()
+        Me.SettingsTabPage.ResumeLayout(False)
+        Me.SettingsTabPage.PerformLayout()
         Me.PageSettingsTabPage.ResumeLayout(False)
         Me.NewTabInfoSettings.ResumeLayout(False)
         Me.HomePageInfoSettings.ResumeLayout(False)
@@ -602,26 +601,32 @@ Partial Class BrowserControls
         Me.NewTabSettings.PerformLayout()
         Me.HomePageSettings.ResumeLayout(False)
         Me.HomePageSettings.PerformLayout()
-        Me.SettingsTabPage.ResumeLayout(False)
-        Me.SettingsTabPage.PerformLayout()
+        Me.HistoryTabPage.ResumeLayout(False)
+        Me.HistoryTabPage.PerformLayout()
+        Me.ControlsTab.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents ControlsTab As TabControl
-    Friend WithEvents HistoryTabPage As TabPage
-    Friend WithEvents PageSettingsTabPage As TabPage
     Friend WithEvents SettingsTabPage As TabPage
-    Friend WithEvents HomePageSettings As GroupBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents BookmarksList As ListBox
+    Friend WithEvents PageSettingsTabPage As TabPage
+    Friend WithEvents NewTabInfoSettings As GroupBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents HomePageInfoSettings As GroupBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
     Friend WithEvents NewTabSettings As GroupBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
@@ -630,24 +635,19 @@ Partial Class BrowserControls
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents NewTabInfoSettings As GroupBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents HomePageInfoSettings As GroupBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents HistoryListBox As ListBox
-    Friend WithEvents BookmarksList As ListBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents HomePageSettings As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents HistoryTabPage As TabPage
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents NavigateSelectedLink As Button
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Button7 As Button
+    Friend WithEvents HistoryListBox As ListBox
+    Friend WithEvents ControlsTab As TabControl
 End Class

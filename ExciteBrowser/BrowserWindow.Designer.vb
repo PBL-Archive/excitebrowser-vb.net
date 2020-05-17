@@ -37,14 +37,14 @@ Partial Class BrowserWindow
         Me.rightMouseClickMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.rightMouseClickMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddTabRightMouseClickMenu, Me.RemoveTabRightMouseClickMenu, Me.NewWindowRightMouseClickMenu})
         Me.rightMouseClickMenu.Name = "ContextMenuStrip1"
-        Me.rightMouseClickMenu.Size = New System.Drawing.Size(225, 82)
+        Me.rightMouseClickMenu.Size = New System.Drawing.Size(265, 82)
         '
         'AddTabRightMouseClickMenu
         '
         Me.AddTabRightMouseClickMenu.Image = CType(resources.GetObject("AddTabRightMouseClickMenu.Image"), System.Drawing.Image)
         Me.AddTabRightMouseClickMenu.Name = "AddTabRightMouseClickMenu"
         Me.AddTabRightMouseClickMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
-        Me.AddTabRightMouseClickMenu.Size = New System.Drawing.Size(224, 26)
+        Me.AddTabRightMouseClickMenu.Size = New System.Drawing.Size(264, 26)
         Me.AddTabRightMouseClickMenu.Text = "Add Tab"
         '
         'RemoveTabRightMouseClickMenu
@@ -52,7 +52,7 @@ Partial Class BrowserWindow
         Me.RemoveTabRightMouseClickMenu.Image = CType(resources.GetObject("RemoveTabRightMouseClickMenu.Image"), System.Drawing.Image)
         Me.RemoveTabRightMouseClickMenu.Name = "RemoveTabRightMouseClickMenu"
         Me.RemoveTabRightMouseClickMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
-        Me.RemoveTabRightMouseClickMenu.Size = New System.Drawing.Size(224, 26)
+        Me.RemoveTabRightMouseClickMenu.Size = New System.Drawing.Size(264, 26)
         Me.RemoveTabRightMouseClickMenu.Text = "Remove Tab"
         '
         'NewWindowRightMouseClickMenu
@@ -61,31 +61,33 @@ Partial Class BrowserWindow
         Me.NewWindowRightMouseClickMenu.Name = "NewWindowRightMouseClickMenu"
         Me.NewWindowRightMouseClickMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewWindowRightMouseClickMenu.Size = New System.Drawing.Size(224, 26)
+        Me.NewWindowRightMouseClickMenu.Size = New System.Drawing.Size(264, 26)
         Me.NewWindowRightMouseClickMenu.Text = "New Window"
         '
         'BrowserTab
         '
         Me.BrowserTab.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BrowserTab.Location = New System.Drawing.Point(0, 0)
+        Me.BrowserTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BrowserTab.Name = "BrowserTab"
         Me.BrowserTab.SelectedIndex = 0
-        Me.BrowserTab.Size = New System.Drawing.Size(952, 572)
+        Me.BrowserTab.Size = New System.Drawing.Size(1269, 704)
         Me.BrowserTab.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
         Me.BrowserTab.TabIndex = 1
         '
         'BrowserWindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(952, 572)
+        Me.ClientSize = New System.Drawing.Size(1269, 704)
         Me.ContextMenuStrip = Me.rightMouseClickMenu
         Me.Controls.Add(Me.BrowserTab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(951, 570)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimumSize = New System.Drawing.Size(1262, 691)
         Me.Name = "BrowserWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ExciteBrowser Browser"
+        Me.Text = "ExciteBrowser"
         Me.rightMouseClickMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 

@@ -56,14 +56,13 @@ Partial Class BrowserTab
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.BrowsingWindowPanel = New System.Windows.Forms.WebBrowser()
-        Me.Menu = New System.Windows.Forms.ToolStrip()
+        Me.BrowserMenu = New System.Windows.Forms.ToolStrip()
         Me.AddTabMenu = New System.Windows.Forms.ToolStripButton()
         Me.RemoveTabMenu = New System.Windows.Forms.ToolStripButton()
         Me.AddPrivateWindowMenu = New System.Windows.Forms.ToolStripButton()
         Me.NewWindowMenu = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.HistoryMenu = New System.Windows.Forms.ToolStripButton()
-        Me.DownloadsMenu = New System.Windows.Forms.ToolStripButton()
         Me.BookmarksMenu = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.CustomizeMenu = New System.Windows.Forms.ToolStripDropDownButton()
@@ -78,16 +77,13 @@ Partial Class BrowserTab
         Me.DeveloperToolsMenu = New System.Windows.Forms.ToolStripDropDownButton()
         Me.SourceCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpMenu = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.About = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.CloseWindow = New System.Windows.Forms.ToolStripButton()
         Me.ColorDialog3 = New System.Windows.Forms.ColorDialog()
         Me.ColorDialog4 = New System.Windows.Forms.ColorDialog()
         Me.NavigationPanel.SuspendLayout()
         CType(Me.SiteLoadIndicatorSuccessfull, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SiteLoadIndicatorLoading, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Menu.SuspendLayout()
+        Me.BrowserMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'BottomToolStripPanel
@@ -157,6 +153,7 @@ Partial Class BrowserTab
         Me.AddressBar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AddressBar.FormattingEnabled = True
+        Me.AddressBar.ItemHeight = 16
         Me.AddressBar.Location = New System.Drawing.Point(129, 2)
         Me.AddressBar.Margin = New System.Windows.Forms.Padding(4)
         Me.AddressBar.Name = "AddressBar"
@@ -180,7 +177,7 @@ Partial Class BrowserTab
         Me.SearchEngineSelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.SearchEngineSelector.BackColor = System.Drawing.Color.White
         Me.SearchEngineSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.SearchEngineSelector.ForeColor = System.Drawing.Color.Transparent
+        Me.SearchEngineSelector.ForeColor = System.Drawing.Color.Black
         Me.SearchEngineSelector.FormattingEnabled = True
         Me.SearchEngineSelector.Location = New System.Drawing.Point(680, 2)
         Me.SearchEngineSelector.Margin = New System.Windows.Forms.Padding(4)
@@ -224,6 +221,7 @@ Partial Class BrowserTab
         Me.SiteLoadIndicatorLoading.BackgroundImage = CType(resources.GetObject("SiteLoadIndicatorLoading.BackgroundImage"), System.Drawing.Image)
         Me.SiteLoadIndicatorLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.SiteLoadIndicatorLoading.ErrorImage = Nothing
+        Me.SiteLoadIndicatorLoading.Image = CType(resources.GetObject("SiteLoadIndicatorLoading.Image"), System.Drawing.Image)
         Me.SiteLoadIndicatorLoading.InitialImage = Nothing
         Me.SiteLoadIndicatorLoading.Location = New System.Drawing.Point(1161, 2)
         Me.SiteLoadIndicatorLoading.Margin = New System.Windows.Forms.Padding(4)
@@ -421,18 +419,18 @@ Partial Class BrowserTab
         Me.BrowsingWindowPanel.Size = New System.Drawing.Size(1213, 600)
         Me.BrowsingWindowPanel.TabIndex = 23
         '
-        'Menu
+        'BrowserMenu
         '
-        Me.Menu.AutoSize = False
-        Me.Menu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Menu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Menu.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddTabMenu, Me.RemoveTabMenu, Me.AddPrivateWindowMenu, Me.NewWindowMenu, Me.ToolStripSeparator9, Me.HistoryMenu, Me.DownloadsMenu, Me.BookmarksMenu, Me.ToolStripSeparator5, Me.CustomizeMenu, Me.ToolStripSeparator6, Me.ToolsMenu, Me.DeveloperToolsMenu, Me.ToolStripSeparator7, Me.HelpMenu, Me.ToolStripSeparator8, Me.CloseWindow})
-        Me.Menu.Location = New System.Drawing.Point(1013, 30)
-        Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(200, 600)
-        Me.Menu.TabIndex = 25
-        Me.Menu.Text = "Menu"
+        Me.BrowserMenu.AutoSize = False
+        Me.BrowserMenu.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BrowserMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BrowserMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.BrowserMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddTabMenu, Me.RemoveTabMenu, Me.AddPrivateWindowMenu, Me.NewWindowMenu, Me.ToolStripSeparator9, Me.HistoryMenu, Me.BookmarksMenu, Me.ToolStripSeparator5, Me.CustomizeMenu, Me.ToolStripSeparator6, Me.ToolsMenu, Me.DeveloperToolsMenu, Me.ToolStripSeparator7, Me.CloseWindow})
+        Me.BrowserMenu.Location = New System.Drawing.Point(1013, 30)
+        Me.BrowserMenu.Name = "BrowserMenu"
+        Me.BrowserMenu.Size = New System.Drawing.Size(200, 600)
+        Me.BrowserMenu.TabIndex = 25
+        Me.BrowserMenu.Text = "BrowserMenu"
         '
         'AddTabMenu
         '
@@ -486,15 +484,6 @@ Partial Class BrowserTab
         Me.HistoryMenu.Name = "HistoryMenu"
         Me.HistoryMenu.Size = New System.Drawing.Size(198, 24)
         Me.HistoryMenu.Text = "History"
-        '
-        'DownloadsMenu
-        '
-        Me.DownloadsMenu.Image = CType(resources.GetObject("DownloadsMenu.Image"), System.Drawing.Image)
-        Me.DownloadsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DownloadsMenu.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.DownloadsMenu.Name = "DownloadsMenu"
-        Me.DownloadsMenu.Size = New System.Drawing.Size(198, 24)
-        Me.DownloadsMenu.Text = "Downloads"
         '
         'BookmarksMenu
         '
@@ -602,28 +591,6 @@ Partial Class BrowserTab
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(198, 6)
         '
-        'HelpMenu
-        '
-        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.About})
-        Me.HelpMenu.Image = CType(resources.GetObject("HelpMenu.Image"), System.Drawing.Image)
-        Me.HelpMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.HelpMenu.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HelpMenu.Name = "HelpMenu"
-        Me.HelpMenu.Size = New System.Drawing.Size(198, 24)
-        Me.HelpMenu.Text = "Help"
-        '
-        'About
-        '
-        Me.About.Image = CType(resources.GetObject("About.Image"), System.Drawing.Image)
-        Me.About.Name = "About"
-        Me.About.Size = New System.Drawing.Size(224, 26)
-        Me.About.Text = "About"
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(198, 6)
-        '
         'CloseWindow
         '
         Me.CloseWindow.Image = CType(resources.GetObject("CloseWindow.Image"), System.Drawing.Image)
@@ -639,7 +606,7 @@ Partial Class BrowserTab
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1213, 630)
-        Me.Controls.Add(Me.Menu)
+        Me.Controls.Add(Me.BrowserMenu)
         Me.Controls.Add(Me.BrowsingWindowPanel)
         Me.Controls.Add(Me.NavigationPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -649,8 +616,8 @@ Partial Class BrowserTab
         Me.NavigationPanel.ResumeLayout(False)
         CType(Me.SiteLoadIndicatorSuccessfull, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SiteLoadIndicatorLoading, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Menu.ResumeLayout(False)
-        Me.Menu.PerformLayout()
+        Me.BrowserMenu.ResumeLayout(False)
+        Me.BrowserMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -685,7 +652,7 @@ Partial Class BrowserTab
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents BrowsingWindowPanel As WebBrowser
-    Friend WithEvents Menu As ToolStrip
+    Friend WithEvents BrowserMenu As ToolStrip
     Friend WithEvents AddTabMenu As ToolStripButton
     Friend WithEvents RemoveTabMenu As ToolStripButton
     Friend WithEvents NewWindowMenu As ToolStripButton
@@ -694,7 +661,6 @@ Partial Class BrowserTab
     Friend WithEvents CustomizeColors As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents CloseWindow As ToolStripButton
     Friend WithEvents CustomizeBackGroundColor As ToolStripMenuItem
     Friend WithEvents CustomizeMenuBackGroundColor As ToolStripMenuItem
@@ -704,14 +670,11 @@ Partial Class BrowserTab
     Friend WithEvents CustomizeNavigatedPanelColor As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents HistoryMenu As ToolStripButton
-    Friend WithEvents DownloadsMenu As ToolStripButton
     Friend WithEvents BookmarksMenu As ToolStripButton
     Friend WithEvents ToolsMenu As ToolStripDropDownButton
     Friend WithEvents HtmlEditor As ToolStripMenuItem
     Friend WithEvents DeveloperToolsMenu As ToolStripDropDownButton
     Friend WithEvents SourceCode As ToolStripMenuItem
-    Friend WithEvents HelpMenu As ToolStripDropDownButton
-    Friend WithEvents About As ToolStripMenuItem
     Friend WithEvents AddressBar As ComboBox
     Friend WithEvents AddPrivateWindowMenu As ToolStripButton
 End Class

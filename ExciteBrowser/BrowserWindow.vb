@@ -21,7 +21,7 @@
         Me.BrowserTab.TabPages.Remove(Me.BrowserTab.SelectedTab)
     End Sub
     Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowRightMouseClickMenu.Click
-        Dim f As New BrowserWindow
-        f.Show()
+        Dim newWindow As New BrowserWindow
+        newWindow.Show()
     End Sub
 End Class
