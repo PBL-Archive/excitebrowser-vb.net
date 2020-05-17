@@ -1,5 +1,5 @@
-# RainDrop Browser
-RainDrop is a simple web browser based on .NET 4 Framework.
+# ExciteBrowser Browser
+ExciteBrowser is a simple web browser based on .NET 4 Framework.
 
 Basic functionalities include -
 1. Add/Remove Tabs
@@ -9,4 +9,4 @@ Basic functionalities include -
 5. HTML Editor
 6. Source Code Viewer.
 
-Download and Run "RainDrop > Setup > Debug > Setup.exe" to install the RainDrop Browser
+Download and Run "ExciteBrowser > Setup > Debug > Setup.exe" to install the ExciteBrowser Browser
